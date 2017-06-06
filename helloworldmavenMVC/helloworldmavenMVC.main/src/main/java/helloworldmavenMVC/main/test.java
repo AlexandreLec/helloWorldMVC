@@ -1,14 +1,17 @@
 package helloworldmavenMVC.main;
 
-import helloworldmavenMVC.model.loadFile;
+import helloworldmavenMVC.controller.controller;
+import helloworldmavenMVC.model.Model;
+import helloworldmavenMVC.view.View;
 
 public class test {
 
 	public static void main(String[] args) {
 		
-		loadFile file = new loadFile();
-		
-		System.out.println(file.getMessage());
+		Model model = new Model();
+		View vue = new View();
+		controller control = new controller(vue,model);
+		control.run();
 
 	}
 
